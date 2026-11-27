@@ -1,6 +1,6 @@
 
 import {useParams} from 'react-router-dom'
-import { useAnimalContext } from '../hooksPerso/useAnimalContext'
+import { useAnimalContext } from "../HooksPerso/useAnimalContext"
 
 
 export default function DetailsPAge(){

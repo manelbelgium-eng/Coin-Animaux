@@ -285,10 +285,11 @@ import Homepage from "./Pages/Homepage.jsx";
 import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 
 import { AnimalProvider } from "./Context/Animaux.jsx";
-import ListePage from "./Pages/ListePage.jsx";
+import ListeAnimal from "./Pages/ListeAnimal.jsx";
 import UpdatePAge from "./Pages/UpdatePage.jsx";
 import DetailsPAge from "./Pages/DetailsPAge.jsx";
 import AddPAge from "./Pages/AddPAge.jsx";
+//import ListeAnimal from "./Pages/ListeAnimal.jsx";
 
 
 const CSS = `
@@ -356,7 +357,7 @@ export default function App(){
         <Routes>
             <Route path="" element={<Homepage/>}  />
             <Route path="add" element={<AddPAge/>} />
-            <Route path="liste" element={<ListePage/>} />
+            <Route path="liste" element={<ListeAnimal/>} />
             <Route path="update/:id" element={<UpdatePAge/>} />
             <Route path="details/:id" element={<DetailsPAge/>} />
 

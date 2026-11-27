@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom"
-import { useAnimalContext } from "../hooksPerso/useAnimalContext"
+import { useAnimalContext } from "../HooksPerso/useAnimalContext"
 
 
 
-export default function ListePage(){
+export default function ListeAnimal(){
 
     const {getAnimaux,deleteAnimal} = useAnimalContext()
 
@@ -13,7 +13,7 @@ export default function ListePage(){
 
     return (
         <>
-            <h1>ListePage</h1>
+            <h1>ListeAnimal</h1>
 
             <ul>
 

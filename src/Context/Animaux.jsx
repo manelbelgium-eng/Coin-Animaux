@@ -17,7 +17,7 @@ export function AnimalProvider({children}){
       couleur: "marron",
       age: 2,
       maladiechronique: "rien",
-      image: "https://picsum.photos/seed/chien3/800/600",
+      image: "https://placedog.net/500/300?id=12",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export function AnimalProvider({children}){
       couleur: "gris",
       age: 1,
       maladiechronique: "rien",
-      image: "https://picsum.photos/seed/chat1/800/600",
+      image: "https://cataas.com/cat?width=500&height=300",
     },
     {
       id: 3,
