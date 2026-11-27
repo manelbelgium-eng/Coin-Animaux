@@ -15,7 +15,7 @@
 import { useParams,useNavigate } from 'react-router-dom';
 
 import { useState } from 'react';
-import { useAnimalContext } from '../hooksPerso/useAnimalContext';
+import { useAnimalContext } from "../HooksPerso/useAnimalContext"
 
 export default function UpdatePage() {
 // récupération des methodes necessaires depuis le hookPerso

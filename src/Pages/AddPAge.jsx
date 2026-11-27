@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useAnimalContext } from "../hooksPerso/useAnimalContext";
+import { useAnimalContext } from "../HooksPerso/useAnimalContext"
 
 import {useNavigate} from 'react-router-dom'
 
