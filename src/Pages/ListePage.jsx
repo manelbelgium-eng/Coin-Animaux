@@ -5,7 +5,7 @@ import { useAnimalContext } from "../hooksPerso/useAnimalContext"
 
 export default function ListePage(){
 
-    const {getAnimaux} = useAnimalContext()
+    const {getAnimaux,deleteAnimal} = useAnimalContext()
 
     const navigate = useNavigate()
 
@@ -28,7 +28,7 @@ export default function ListePage(){
                     <div>
                                 <button onClick={() => navigate(`/details/${a.id}`)}>Details</button>
                                 <button onClick={() => navigate(`/update/${a.id}`)}>Update</button>
-                                <button onClick={() => deleteCar(a.id)}>Delete</button>
+                                <button onClick={() => deleteAnimal(a.id)}>Delete</button>
                             </div>
                       </div>   
                        <img src={a.image} alt={a.model} />   
