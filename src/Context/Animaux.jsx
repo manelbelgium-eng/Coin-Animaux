@@ -60,7 +60,7 @@ const getAnimaux = () => {
 }
 
 const getAnimalById = (id) => {
-    const index = Animaux.findIndex((c) => c.id === id)
+    const index = Animaux.findIndex((c) => c.id === Number(id))
     return Animaux[index]
 }
 

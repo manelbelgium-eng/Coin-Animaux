@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import { useAnimalContext } from "../hooksPerso/useAnimalContext"
 
 
@@ -5,6 +6,8 @@ import { useAnimalContext } from "../hooksPerso/useAnimalContext"
 export default function ListePage(){
 
     const {getAnimaux} = useAnimalContext()
+
+    const navigate = useNavigate()
 
     const listeAnimals = getAnimaux()
 
@@ -15,7 +18,7 @@ export default function ListePage(){
             <ul>
 
             {listeAnimals.map((a) => (
-                <li>
+                <li key={a.id}>
                     <div>
                     <h2>{a.type}</h2>
                     <p>{a.description}</p>
@@ -23,8 +26,8 @@ export default function ListePage(){
                     <p>{a.race} </p>
                     <p>{a.age}</p>
                     <div>
-                                <button>Details</button>
-                                <button>Update</button>
+                                <button onClick={() => navigate(`/details/${a.id}`)}>Details</button>
+                                <button onClick={() => navigate(`/update/${a.id}`)}>Update</button>
                                 <button onClick={() => deleteCar(a.id)}>Delete</button>
                             </div>
                       </div>   

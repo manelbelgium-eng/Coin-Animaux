@@ -284,12 +284,11 @@ import Homepage from "./Pages/Homepage.jsx";
 
 import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 
-
-import AddPAge from "./Pages/Addpage.jsx";
 import { AnimalProvider } from "./Context/Animaux.jsx";
 import ListePage from "./Pages/ListePage.jsx";
 import UpdatePAge from "./Pages/UpdatePage.jsx";
 import DetailsPAge from "./Pages/DetailsPAge.jsx";
+import AddPAge from "./Pages/AddPAge.jsx";
 
 
 const CSS = `
@@ -358,8 +357,8 @@ export default function App(){
             <Route path="" element={<Homepage/>}  />
             <Route path="add" element={<AddPAge/>} />
             <Route path="liste" element={<ListePage/>} />
-            <Route path="update" element={<UpdatePAge/>} />
-            <Route path="details" element={<DetailsPAge/>} />
+            <Route path="update/:id" element={<UpdatePAge/>} />
+            <Route path="details/:id" element={<DetailsPAge/>} />
 
 
         </Routes>
