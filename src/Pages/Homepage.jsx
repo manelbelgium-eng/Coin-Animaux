@@ -11,8 +11,11 @@ export default function Homepage(){
     ) 
 }*/
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useAnimalContext } from "../HooksPerso/useAnimalContext"
+
+import { useState } from "react"
+import { useAuth } from "../HooksPerso/useAuth"
 
 // ===== Styles =====
 const styles = {
@@ -90,13 +93,17 @@ const styles = {
 // ===== Données des étapes =====
 const etapes = [
   { titre: "Remplissez le formulaire", texte: "Type, race, âge, besoins particuliers : dites-nous tout sur votre animal." },
-  { titre: "Ajoutez une photo", texte: "Une photo nous aide à le reconnaître et à bien l'accueillir." },
+  { titre: "Ajoutez une photo", texte: "Une photo nous aide à le reconnaître et à bien l'accueillir."  },
   { titre: "Suivez sa fiche", texte: "Consultez, modifiez ou supprimez la fiche à tout moment." },
 ]
 
 export default function Homepage() {
   const { getAnimaux } = useAnimalContext()
+    const {userConnected} = useAuth()
   const apercu = getAnimaux().slice(0, 4)
+  const navigate = useNavigate()
+
+
 
   return (
     <>
@@ -115,19 +122,21 @@ export default function Homepage() {
       </section>
 
       {/* Comment ça marche */}
+      {userConnected ? (
       <section style={styles.section}>
         <h2>Comment ça marche ?</h2>
         <div style={styles.stepsGrid}>
           {etapes.map((e, i) => (
-            <div key={e.titre} style={styles.step}>
+              
+              <div onClick={() => navigate('/add') } key={e.titre} style={styles.step}>
               <span style={styles.stepNum}>{i + 1}</span>
               <h3>{e.titre}</h3>
               <p>{e.texte}</p>
             </div>
-          ))}
-        </div>
-      </section>
+            ))}
 
+        </div>
+      </section> ) : null}
       {/* Aperçu des animaux */}
       <section style={styles.section}>
         <h2>Nos pensionnaires</h2>

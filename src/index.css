@@ -115,3 +115,12 @@ code {
   display: flex;
   justify-content: space-evenly;
 }
+
+
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: block;
+}

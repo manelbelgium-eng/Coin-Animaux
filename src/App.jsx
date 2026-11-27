@@ -289,6 +289,7 @@ import ListeAnimal from "./Pages/ListeAnimal.jsx";
 import UpdatePAge from "./Pages/UpdatePage.jsx";
 import DetailsPAge from "./Pages/DetailsPAge.jsx";
 import AddPAge from "./Pages/AddPAge.jsx";
+import { AuthProvider } from "./Context/AuthContext.jsx";
 
 
 
@@ -347,7 +348,9 @@ const CSS = `
 export default function App(){
 
   return (
+      <AuthProvider>
     <AnimalProvider>
+
 
 
       <Router>
@@ -366,6 +369,7 @@ export default function App(){
 
       </Router>
     </AnimalProvider>
+      </AuthProvider>
 
   )
 }
