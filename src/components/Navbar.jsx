@@ -14,11 +14,11 @@ export default function Navbar() {
       <Link to="/gardiennages/nouveau">Réserver une garde</Link>
     </nav>*/
 <nav className="navbar">
-      <Link to="/" end>Homepage</Link>
-      <Link to="/add" end>AddPAge</Link>
+      <Link to="/" >Homepage</Link>
+      <Link to="/add" >AddPAge</Link>
       <Link to="/liste">ListePage</Link>
       <Link to="/update">UpdatePage</Link>
-      <Link to="/details" end>DetailsPAge</Link>
+      <Link to="/details" >DetailsPAge</Link>
       
     </nav>
 

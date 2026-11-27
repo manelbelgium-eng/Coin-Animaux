@@ -1,5 +1,6 @@
+import { useAnimalContext } from "../hooksPerso/useAnimalContext"
 
-import { useAnimalContext } from "../HooksPerso/useAnimalContext"
+
 
 export default function ListePage(){
 
